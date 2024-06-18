@@ -1,0 +1,72 @@
+.user-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Ensure card content fills the space */
+  padding: 20px;
+  margin: 10px;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+  flex-grow: 1; /* Allow body to expand and fill the remaining space */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.card-skills {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background color */
+  border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+  padding: 10px;
+  margin-top: auto; /* Push to the bottom of the card */
+}
+
+.card-skills h4 {
+  margin-bottom: 0.5rem;
+  color: #fff; /* White text color */
+}
+
+.card-skills ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow skills to wrap to the next line */
+  gap: 5px; /* Spacing between skills */
+}
+
+.skill-card {
+  border-radius: 15px; /* Rounded corners */
+  padding: 5px 10px; /* Padding for content */
+  margin-bottom: 5px; /* Spacing between skills */
+  font-size: 0.9rem;
+  color: #fff; /* Text color */
+  display: inline-block; /* Make each skill an inline block */
+  white-space: nowrap; /* Prevent text wrapping within each tab */
+}
